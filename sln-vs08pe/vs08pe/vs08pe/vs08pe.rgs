@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'vs08pe'
+		'vs08pe.EXE'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}

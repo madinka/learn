@@ -14,50 +14,21 @@ msvcprtd.lib(MSVCP90D.dll):-1:
 #include <gtest/gtest.h>
 
 // App
-#include "applications-server-cross/crosscuttings/logger.h"
-
-
-class Foo {
-  public:
-    Foo(int j) { i=new int[j]; }
-    ~Foo() { delete i; }
-  private:
-    int* i;
-};
-
-/*
-class Bar: Foo {
-  public:
-    Bar(int j) { i = new char[j]; }
-    ~Bar() { delete i; }
-  private:
-    char* i;
-};
-*/
-
+using std::cin;
 
 int main(int argc, char* argv[])
 {
 
-  /*Foo* f=new Foo(100);
-  Foo* b=new Bar(200);
-  *f=*b;
-  delete f;
-  delete b;*/
-
   // ѕолучаем текущую локаль CRT (если нужно потом восстановить)
   char* crtLocale = setlocale(LC_ALL, NULL);
   setlocale(LC_ALL, ".1251");
-
-  // инициализаци€ вывода в лог - нужно дл€ тест. приложени€
-  // если закомменчено выводит ошибки на консоль, а не в лог
-  //::crosscuttings::loggers::InitLogger();  
-
   // Run
   testing::InitGoogleTest(&argc, argv);
   testing::GTEST_FLAG(print_time) = true;
   RUN_ALL_TESTS();
   setlocale(LC_ALL, crtLocale);
+  //int i = 0;
+  //pause();
   return 0;
 }
 

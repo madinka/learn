@@ -1,9 +1,8 @@
-#pragma once  // защита от повторного включения - только для Visual Studio
+//#pragma once  // защита от повторного включения - только для Visual Studio
 #ifndef MY_CLOCK_H_
 #define MY_CLOCK_H_
-#include <iostream>
-using namespace std;
-class MyClock {
+
+class MyStateClock {
 public:
 	void reset();
 	void ChangeMode();
@@ -17,7 +16,4 @@ private:
 	int minute_; 
 	int second_;
 };
-
-
-
 #endif  // MY_CLOCK_H_

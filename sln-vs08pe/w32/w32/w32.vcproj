@@ -216,15 +216,15 @@
 				>
 			</File>
 			<File
+				RelativePath="..\..\..\src\stateclock.cc"
+				>
+			</File>
+			<File
 				RelativePath="..\..\..\src\stateclock.h"
 				>
 			</File>
 			<File
 				RelativePath="..\..\..\src\stateclock_test.cc"
-				>
-			</File>
-			<File
-				RelativePath="..\..\..\src\stateclok.cc"
 				>
 			</File>
 		</Filter>

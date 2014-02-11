@@ -6,11 +6,11 @@
 using std::cout;
 using std::endl;
 
-void MyClock::PrintHello() {
+void myclock::PrintHello() {
   cout << "hello" << endl;
 }
 
-void MyClock::UpOutPower() {
+void myclock::UpOutPower() {
   cout << "upPower" << endl;
 }
 

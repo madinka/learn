@@ -11,10 +11,10 @@
 // App
 
 TEST(Myclock, None){
-  myclock a;
-  a.clockset(10,59,30);
+  MyClock a;
+  a.ClockSet(10,59,30);
   for (int i=0; i< 1000; i++) {
 	  a.tick();
-	  a.disp();
+	  a.Display();
   }
 }

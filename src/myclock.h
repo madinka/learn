@@ -5,6 +5,16 @@
 //using namespace std;  // BAD!
 class MyClock {
 public:
+  MyClock() {
+  
+  }
+  // MyClock a(1, 2, 1);
+  MyClock(int h, int m, int s) {
+    hour_ = h;
+    min_ = m;
+    sec_ = s;
+  }
+  
 	void Display();
 	void ClockSet(int h, int m, int s);
 	void tick();

@@ -27,7 +27,7 @@ void MyStateClock::increment(){
 		case DisplayingTime_:
 			break;
 		case SettingHours_:
-			hour_=(hour_+1)%24;
+			hour_ = (hour_+1)%24;
 			break;
 		case SettingMinutes_:
 			minute_=(minute_+1)%60;

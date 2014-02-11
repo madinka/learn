@@ -11,11 +11,12 @@ void MyClock::ClockSet(int h, int m, int s) {
 void MyClock::tick() {
   if (sec_==59) {
     sec_=0; 
-	min_++;
-  }
-  else sec_++;
-  if (min_=+60) {
-    min_==0; hour_++;
+    min_++;
+  } else 
+    sec_++;
+  if (min_ =+ 60) {  // err
+    min_ == 0;  // err 
+    hour_++;
   }
 }
 

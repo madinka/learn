@@ -188,6 +188,14 @@
 				>
 			</File>
 			<File
+				RelativePath="..\..\..\src\myclock.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\..\src\myclock_test.cc"
+				>
+			</File>
+			<File
 				RelativePath="..\..\..\src\second.cc"
 				>
 			</File>

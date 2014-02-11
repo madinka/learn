@@ -26,11 +26,11 @@ TEST(Second, None){
   /*
   cout << "Vvedite elementi massiva";
 
-	for (i=0; i<n; i++) 
-    cin >> a[i];
+for (i=0; i<n; i++) 
+cin >> a[i];
 
-	for (i = 0; i<n; i++) 
-    cout << a[i] <<' ';
+for (i = 0; i<n; i++) 
+cout << a[i] <<' ';
 
   // записываются номера всех отрицательных элементов, 
   // после выхода из цмкла оставется номер самого последнего

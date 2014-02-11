@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
   RUN_ALL_TESTS();
   setlocale(LC_ALL, crtLocale);
   //int i = 0;
-  //pause();
+  system("pause");
   return 0;
 }
 

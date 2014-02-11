@@ -200,10 +200,6 @@
 				>
 			</File>
 			<File
-				RelativePath="..\..\..\src\second.cc"
-				>
-			</File>
-			<File
 				RelativePath="..\..\..\src\second.h"
 				>
 			</File>
@@ -212,7 +208,23 @@
 				>
 			</File>
 			<File
+				RelativePath="..\..\..\src\second_test.cc"
+				>
+			</File>
+			<File
 				RelativePath="..\..\..\src\small-tests-launcher.cc"
+				>
+			</File>
+			<File
+				RelativePath="..\..\..\src\stateclock.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\..\src\stateclock_test.cc"
+				>
+			</File>
+			<File
+				RelativePath="..\..\..\src\stateclok.cc"
 				>
 			</File>
 		</Filter>

@@ -8,18 +8,41 @@ for i in range(8):
 
 Прочитать про:
 
-    class, list, tuple, map, for in, как запускается, import
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   , tuple, (dict), for in, как запускается, import
 """
 
 
 class MyClock(object):
-    def __init__(self, h, m, s):
+    def __init__(self, h=0, m=0, s=0):
         self.min_ = m
         self.hour_ = h
         self.sec_ = s
 
     def reset(self):
-        self.min_ = 0
+        pass
 
     def sw_(self):
         return " "
@@ -41,9 +64,10 @@ class MyClock(object):
 
 
 def main():
-    clock = MyClock(h=9, m=1, s=56)
-
+    clock = MyClock()#h=9, m=1, s=50)
+    #clock.initialize()  # BAD!
     clock.reset()
+
     clock.display()
 
 

@@ -41,7 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="&quot;..\..\..\third_party\gmock-1.6.0\fused-src&quot;"
+				AdditionalIncludeDirectories="&quot;..\..\..\third_party\gmock-1.6.0\fused-src&quot;;C:\Python27\include;&quot;C:\home\sinetova-madina\learn\src&quot;"
 				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -61,6 +61,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
+				AdditionalDependencies="python27.lib boost_python-vc90-mt-gd-1_55.lib"
 				LinkIncremental="2"
 				GenerateDebugInformation="true"
 				SubSystem="1"
@@ -184,6 +185,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\..\..\src\di_test.cc"
+				>
+			</File>
+			<File
 				RelativePath="..\..\..\third_party\gmock-1.6.0\fused-src\gmock-gtest-all.cc"
 				>
 			</File>
@@ -227,6 +232,22 @@
 				RelativePath="..\..\..\src\stateclock_test.cc"
 				>
 			</File>
+			<Filter
+				Name="emb"
+				>
+				<File
+					RelativePath="..\..\..\src\emb\expose_test.cc"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\src\emb\foo.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\src\emb\foo_py.h"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Header Files"

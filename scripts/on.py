@@ -7,30 +7,6 @@ for i in range(8):
     detector.upRefPower()
 
 Прочитать про:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
    , tuple, (dict), for in, как запускается, import
 """
 

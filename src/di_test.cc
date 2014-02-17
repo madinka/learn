@@ -8,9 +8,6 @@
 #include <boost/make_shared.hpp>
 #include <boost/python.hpp>
 
-
-
-
 using boost::shared_ptr;
 using boost::python::object;
 using boost::python::handle;

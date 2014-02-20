@@ -49,7 +49,13 @@ BOOST_PYTHON_MODULE(mymodule)
     class_<vector<unsigned char>>("MyListClass")
         .def(vector_indexing_suite<vector<unsigned char>>() );
 
+    /*
     class_<MyClass>("MyClass")
+        .def("myFuncGet", &MyClass::myFuncGet)
+        .def("myFuncSet", &MyClass::myFuncSet)
+        ;*/
+
+    class_<MyClass, boost::shared_ptr<MyClass>>("MyClassShared")
         .def("myFuncGet", &MyClass::myFuncGet)
         .def("myFuncSet", &MyClass::myFuncSet)
         ;
@@ -59,6 +65,7 @@ BOOST_PYTHON_MODULE(mymodule)
 TEST(Std, Vector) {
   Py_Initialize();
   try {
+    initmymodule();  // !!!
     boost::shared_ptr<MyClass> ptr_cc_object = boost::make_shared<MyClass>();
 
     object main = object(handle<>(borrowed(PyImport_AddModule("__main__"))));

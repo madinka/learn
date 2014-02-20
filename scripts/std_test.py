@@ -1,1 +1,1 @@
-a_foo = Nonedef setup(a_foo_from_cxx):  print 'setup called with', a_foo_from_cxx  global a_foo  a_foo = a_foo_from_cxxdef run():  print a_foo.myFuncGet()print 'main module loaded'
+a_foo = Nonedef setup(a_foo_from_cxx):  print 'setup called with', a_foo_from_cxx  global a_foo  a_foo = a_foo_from_cxx    print "Assigned"def run():  print a_foo.myFuncGet()  #my = mymodule.MyClass()  passprint 'main module loaded'

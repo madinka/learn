@@ -39,7 +39,7 @@ public:
       return vector<unsigned char>();
   }
   void myFuncSet(const vector<unsigned char>& list) {
-
+    printf("runned!!\n");
   }
 };
 
@@ -49,11 +49,11 @@ BOOST_PYTHON_MODULE(mymodule)
     class_<vector<unsigned char>>("MyListClass")
         .def(vector_indexing_suite<vector<unsigned char>>() );
 
-    /*
-    class_<MyClass>("MyClass")
-        .def("myFuncGet", &MyClass::myFuncGet)
-        .def("myFuncSet", &MyClass::myFuncSet)
-        ;*/
+
+    //class_<MyClass>("MyClass")
+    //    .def("myFuncGet", &MyClass::myFuncGet)
+    //    .def("myFuncSet", &MyClass::myFuncSet)
+    //    ;
 
     class_<MyClass, boost::shared_ptr<MyClass>>("MyClassShared")
         .def("myFuncGet", &MyClass::myFuncGet)

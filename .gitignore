@@ -15,3 +15,5 @@
 *.sdf
 *.ncb
 *.obj
+*.lib
+*.exe

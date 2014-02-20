@@ -59,28 +59,11 @@ BOOST_PYTHON_MODULE(mymodule)
 TEST(Std, Vector) {
   Py_Initialize();
   try {
-    PyRun_SimpleString(
-      "a_foo = None\n"
-      "\n"
-      "def setup(a_foo_from_cxx):\n"
-      "  print 'setup called with', a_foo_from_cxx\n"
-      "  global a_foo\n"
-      "  a_foo = a_foo_from_cxx\n"
-      "\n"
-      "def run():\n"
-      "  a_foo.SetChannel(6)\n"
-      "  pass#a_foo.SetChannel(6)\n"
-      "\n"
-      "print 'main module loaded'\n"
-    );
+    boost::shared_ptr<MyClass> ptr_cc_object = boost::make_shared<MyClass>();
 
-    // Not work...
-    shared_ptr<Preamplifier> fake(new PreamplifierImplFake);
-    boost::shared_ptr<PreamplifierWrapper> ptr_cc_object(
-        new PreamplifierWrapper(fake));
-
-    initpreampl_wrapper();
     object main = object(handle<>(borrowed(PyImport_AddModule("__main__"))));
+    boost::python::object global_namespace(main.attr("__dict__"));
+    boost::python::exec_file("../scripts/std_test.py", global_namespace, global_namespace);
 
     // pass the reference to a_cxx_foo into python:
     object setup_function = main.attr("setup");

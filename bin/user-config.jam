@@ -1,0 +1,5 @@
+using python : 2.7 
+  : C:\\Python27\\python.exe
+  : C:\\Python27\\Include 
+  : C:\\Python27\\libs
+  : <python-debugging>off ;

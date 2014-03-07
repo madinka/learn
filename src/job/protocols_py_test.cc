@@ -31,31 +31,32 @@ static string portName = "COM7";
 //extern void __cdecl initprotocols_module(void);
 
 TEST(Std, Protocols) {
-  Py_Initialize();
-  try {
-    init_protocols_py_module();  // !!!
+  // Build
+  //shared_ptr<IProtocol> old_protocol(new IProtocol());
+  //old_protocol->resetLayerParameters(portName);
+  //shared_ptr<ProtocolsLayerImpl> ptr_to_cc_obj(new ProtocolsLayerImpl(old_protocol));
 
-    //shared_ptr<IProtocol> old_protocol(new IProtocol());
-    //old_protocol->resetLayerParameters(portName);
+  // Do it()
+  { 
+    // Python magic
+    Py_Initialize();
+    try {
+      std::string script_name = "../scripts/protocols_test.py";
+      init_protocols_py_module();  // !!! init_hello_...
+      object main = object(handle<>(borrowed(PyImport_AddModule("__main__"))));
+      boost::python::object global_namespace(main.attr("__dict__"));
+      boost::python::exec_file(script_name, global_namespace, global_namespace);
 
-    //shared_ptr<ProtocolsLayerImpl> ptr_cc_object(new ProtocolsLayerImpl(old_protocol));
+      // def work(...)
+      // pass the reference to a_cxx_foo into python:
+      //object work_function = main.attr("work");
+      //work_function(ptr_to_cc_obj);
+    } catch (error_already_set& e) {
+      Py_Finalize();
+      PyErr_Print();
+      throw e;
+    }
 
-    object main = object(handle<>(borrowed(PyImport_AddModule("__main__"))));
-    boost::python::object global_namespace(main.attr("__dict__"));
-    boost::python::exec_file("../scripts/protocols_test.py", global_namespace, global_namespace);
-
-    // pass the reference to a_cxx_foo into python:
-    //object setup_function = main.attr("setup");
-    //setup_function(ptr_cc_object);
-
-    // now run the python 'main' function
-    object run_func = main.attr("create_on_python_side");
-    run_func();
-  } catch (error_already_set& e) {
     Py_Finalize();
-    PyErr_Print();
-    throw e;
   }
-
-  Py_Finalize();
 }

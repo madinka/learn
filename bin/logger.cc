@@ -1,4 +1,4 @@
-
+#define BOOST_NO_EXCEPTIONS
 // C++
 #include <iostream>
 
@@ -38,7 +38,6 @@ public:
   void set(std::string msg) { this->msg = msg; }
   std::string greet() { return msg; }
   std::string msg;
-
 };
 
 class Talker {
@@ -70,6 +69,10 @@ BOOST_PYTHON_MODULE(hello_ext)
   class_<Talker, boost::shared_ptr<Talker> >("Talker", init<shared_ptr<Hello>>())
       .def("say", &Talker::say)
     ;
+}
+
+void init_hello_ext_module() {
+  inithello_ext();
 }
 
 namespace boost

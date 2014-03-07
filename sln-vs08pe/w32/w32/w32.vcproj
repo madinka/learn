@@ -236,15 +236,31 @@
 				Name="emb"
 				>
 				<File
-					RelativePath="..\..\..\src\emb\expose_test.cc"
-					>
-				</File>
-				<File
 					RelativePath="..\..\..\src\emb\foo.h"
 					>
 				</File>
 				<File
+					RelativePath="..\..\..\src\emb\foo_py.cc"
+					>
+				</File>
+				<File
 					RelativePath="..\..\..\src\emb\foo_py.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\src\emb\foo_py_test.cc"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="other"
+				>
+				<File
+					RelativePath="..\..\..\bin\logger.cc"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\bin\logger_py_test.cc"
 					>
 				</File>
 			</Filter>

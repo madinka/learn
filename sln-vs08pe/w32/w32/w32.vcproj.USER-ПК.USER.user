@@ -11,7 +11,7 @@
 			<DebugSettings
 				Command="$(TargetPath)"
 				WorkingDirectory="C:\home\sinetova-madina\learn"
-				CommandArguments=""
+				CommandArguments="--gtest_filter=EmbPy.RunF*le:EmbLogger.*"
 				Attach="false"
 				DebuggerType="3"
 				Remote="1"

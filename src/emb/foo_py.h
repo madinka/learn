@@ -7,7 +7,7 @@
 // App
 #include "foo.h"
 
-void init_hello_module();
+void init_hello_module();  // иначе модуль не инициализируест и прогр. сломается
 
 
 #endif // FOO_PY_H

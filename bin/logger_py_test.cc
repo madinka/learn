@@ -10,8 +10,8 @@
 #include <gtest/gtest.h>
 
 // App
-#include "emb/foo.h"
-#include "emb/foo_py.h"
+#include "logger.h"
+#include "logger_py.h"  // только для инициализации
 
 using boost::python::object;
 using boost::python::handle;

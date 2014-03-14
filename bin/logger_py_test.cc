@@ -1,10 +1,10 @@
+// Передаем чертежи
 // C++
 #include <string>
 #include <iostream>
 
 // Third party
 #include <boost/shared_ptr.hpp>
-#include <boost/make_shared.hpp>
 #include <boost/python.hpp>
 
 #include <gtest/gtest.h>
@@ -17,6 +17,7 @@ using boost::python::object;
 using boost::python::handle;
 using boost::python::borrowed;
 using boost::python::error_already_set;
+using boost::shared_ptr;
 
 // Third party
 #include <gtest/gtest.h>
@@ -24,15 +25,15 @@ using boost::python::error_already_set;
 TEST(EmbLogger, Logger) {
 
   // Build - где-то
-  //std::string string_di = "c++";
-  //boost::shared_ptr<Foo> ptr_cc_object = boost::make_shared<Foo>(string_di);
+  std::string string_di("c++");
+  shared_ptr<World> ptr_cc_object(new World(string_di));
 
-  // Do it()
+  // Work:Task0
   { 
     Py_Initialize();
     try {
-      //init_hello_ext_module();
-	    std::string file_name = "scripts/glue.py";
+      init_hello_ext_module();
+	    std::string file_name = "scripts/logger.py";
 
       // Подготовка к вызову
       object main = object(handle<>(borrowed(PyImport_AddModule("__main__"))));
@@ -41,12 +42,16 @@ TEST(EmbLogger, Logger) {
 
       // pass the reference to a_cxx_foo into python:
       // def work(...)
-      //object work = main.attr("work");
-      //work(ptr_cc_object, ?);
+      object work = main.attr("work");
+      work(ptr_cc_object);  // Появляется копия shared_ptr<Foo> ptr_cc
+
     } catch (error_already_set) {
       PyErr_Print();
     }
 
     Py_Finalize();
   }
+
+  // Work::Task1
+  ptr_cc_object->greet();
 }

@@ -21,6 +21,9 @@ using boost::python::object;
 using boost::python::handle;
 using boost::python::borrowed;
 using boost::python::error_already_set;
+using boost::shared_ptr;
+
+using std::string;
 
 TEST(EmbPy, RunFromString) {
   Py_Initialize();
@@ -60,11 +63,14 @@ TEST(EmbPy, RunFromString) {
 }
 
 TEST(EmbPy, RunFromFile) {
-  // Build - где-то
-  std::string string_di = "c++";
-  boost::shared_ptr<Foo> ptr_cc_object = boost::make_shared<Foo>(string_di);
+  // Build stage
+  string string_di("c++");  // создали объект в стеке
+  string s = string_di;  // в стеке создастся копия.
+  Foo* foo = new Foo(string_di);  // "Сырой указатель" (просто адрес, 32 бита например) создали в стеке, а объект в куче!
+  Foo* foo2 = foo;  // в куче новый объект не создастся
+  shared_ptr<Foo> ptr_cc_object(foo);  // Создаем "умный указатель" в стеке и передает ему "сырой указатель"
 
-  // Do it()
+  // Work stage
   { 
     Py_Initialize();
     try {

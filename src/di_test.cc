@@ -54,23 +54,46 @@ BOOST_PYTHON_MODULE(preampl)
 }
 
 TEST(DI, Base) {
+  {
+    // Создается в стеке!!
+	  PreamplifierImplReal preampl;  // создание по значению!
+
+	  // Клиентский код
+	  // Действия над усилителем
+    preampl.SetChannel(1);
+
+    // Вызывается деструктор preampl
+  }
+  //
+}
+
+TEST(DI, RawPointer) {
 	//Preamplifier preampl;  // не компилируется
 	//PreamplifierImplFake preampl;
-	PreamplifierImplReal preampl;  // создание по значению!
+  {
+    // Создается в куче!!
+	  PreamplifierImplReal* preampl = new PreamplifierImplReal();  // создание по значению!
 
-	// Клиентский код
-	// Действия над усилителем
-	preampl.SetChannel(1);
+	  // Клиентский код
+	  // Действия над усилителем
+    preampl->SetChannel(1);
+
+    // не!!! Вызывается  деструктор preampl
+    delete preampl;  // !!
+  }
+  // Может быть утечка память, т.к. мы не вызвали делете
+  //
 }
 
 TEST(DI, SmartPtr) {
-	//Preamplifier preampl;  // не компилируется
-	//PreamplifierImplFake preampl;
+  // Память выделяется в куче, но "пульт управления" передаетсая стековой переменной
 	shared_ptr<Preamplifier> preampl(new PreamplifierImplFake());  // создание по значению!
 
 	// Клиентский код
 	// Действия над усилителем
 	preampl->SetChannel(1);
+
+  // Вызовется деструктор
 }
 
 TEST(DI, RunFromString) {

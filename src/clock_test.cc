@@ -4,9 +4,11 @@
 #include <gtest/gtest.h>
 
 TEST(Clock, Hello) {
-  myclock clock;
-  clock.PrintHello();
+  // Build
+  //myclock clock;
+  myclock2  clock;
 
-  //
+  // Work
+  clock.PrintHello();
   clock.UpOutPower();
 }

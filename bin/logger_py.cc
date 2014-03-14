@@ -6,7 +6,14 @@ BOOST_PYTHON_MODULE(hello_ext)
 {
   def("greet", greet)
     ;
-  class_<World>("World", init<std::string>())
+
+  // Если так, то по значения или для создание внутри питона
+  //class_<World>("World", init<std::string>())
+  //  .def("greet", &World::greet)
+  //  .def("set", &World::set)
+  //  ;
+
+  class_<World, boost::shared_ptr<World>>("World", init<std::string>())
     .def("greet", &World::greet)
     .def("set", &World::set)
     ;

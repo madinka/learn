@@ -256,6 +256,18 @@
 				Name="other"
 				>
 				<File
+					RelativePath=".\interpolators.h"
+					>
+				</File>
+				<File
+					RelativePath=".\interpolators_py.cc"
+					>
+				</File>
+				<File
+					RelativePath=".\interpolators_py.h"
+					>
+				</File>
+				<File
 					RelativePath="..\..\..\bin\logger.cc"
 					>
 				</File>

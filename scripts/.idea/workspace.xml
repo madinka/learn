@@ -35,7 +35,7 @@
       <file leaf-file-name="glue_test.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/glue_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="18" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+            <state line="4" column="18" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="204">
               <folding />
             </state>
           </provider>
@@ -44,7 +44,7 @@
       <file leaf-file-name="glue.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/glue.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="220" selection-end="451" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+            <state line="13" column="0" selection-start="220" selection-end="451" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="544">
               <folding />
             </state>
           </provider>
@@ -53,7 +53,7 @@
       <file leaf-file-name="logger.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/logger.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="484" selection-end="484" vertical-scroll-proportion="0.68237346" vertical-offset="0" max-vertical-offset="573">
+            <state line="12" column="18" selection-start="236" selection-end="250" vertical-scroll-proportion="0.23502304" vertical-offset="0" max-vertical-offset="868">
               <folding />
             </state>
           </provider>
@@ -138,7 +138,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/glue_test.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../power-amplifier-soul/pa_pc_part_canary/models" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
@@ -422,15 +422,15 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39932886" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32997763" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997763" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -452,6 +452,34 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/foo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="44" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="442">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/glue_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="18" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="204">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/glue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="220" selection-end="451" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="544">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logger.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="493">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/foo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="44" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="442">
@@ -638,7 +666,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/logger.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="484" selection-end="484" vertical-scroll-proportion="0.68237346" vertical-offset="0" max-vertical-offset="573">
+        <state line="12" column="18" selection-start="236" selection-end="250" vertical-scroll-proportion="0.23502304" vertical-offset="0" max-vertical-offset="868">
           <folding />
         </state>
       </provider>
